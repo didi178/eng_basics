@@ -1,0 +1,30 @@
+<%= form_with(model: fib, remote: true) do |form| %>
+  <% if fib.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(fib.errors.count, "error") %> prohibited this fib from being saved:</h2>
+
+      <ul>
+      <% fib.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="info">
+    <%= fib.generated_fibs %>
+  </div>
+  <div class="field">
+    <%#= form.label :generated_fibs %>
+    <%#= form.text_area :generated_fibs, id: :fib_generated_fibs %>
+    <p>
+      <strong>Num of sequence</strong>
+    </p>
+    <%= form.label :nums %>
+    <%= form.number_field :nums, id: :fib_num %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

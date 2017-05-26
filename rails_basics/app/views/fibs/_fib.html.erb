@@ -1,0 +1,5 @@
+      <tr id="fib_id_<%= fib.id %>">
+        <td><%= fib.generated_fibs %></td>
+        <td><%= link_to 'Edit', edit_fib_path(fib), remote: true %></td>
+        <td><%= link_to 'Destroy', fib, method: :delete, remote: true, data: { confirm: 'Are you sure?' } %></td>
+      </tr>

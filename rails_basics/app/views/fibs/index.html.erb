@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Fibs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Generated fibs</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody id="fibs_table">
+    
+      <%= render @fibs %>
+    
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Fib', new_fib_path, remote: true %>
+
+<div id="nested">
+  
+</div>

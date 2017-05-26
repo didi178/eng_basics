@@ -1,0 +1,2 @@
+$("#nested").empty();
+$("#fib_id_<%= @fib.id.to_s %>").replaceWith('<%= escape_javascript(render 'fibs/fib', fib: @fib) %>');
